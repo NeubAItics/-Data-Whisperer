@@ -8,7 +8,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Initialize LangChain with OpenAI key
+import os
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 if not OPENAI_API_KEY:
     raise ValueError("OpenAI API Key is not set in the environment file.")
 
